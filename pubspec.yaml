@@ -1,0 +1,34 @@
+name: tisteps
+description: "Tisteps Task"
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.1 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+  flutter_bloc: ^8.1.6
+  get_it: ^7.7.0
+  cached_network_image: ^3.3.1
+  equatable: ^2.0.5
+  dio: ^5.5.0+1
+  dartz: ^0.10.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  fonts:
+    - family: SF-Pro
+      fonts:
+        - asset: assets/font/SF-Pro.ttf
