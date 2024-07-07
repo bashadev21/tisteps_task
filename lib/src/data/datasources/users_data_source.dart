@@ -7,7 +7,7 @@ import '../../common/api.dart';
 import '../models/user_list.dart';
 
 abstract class UserRemoteDataSource {
-  Future<UserData> GetUser({int pageSize = 1});
+  Future<UserData> getUser({int pageSize = 1});
   Future<UserDetail> getUserDetail({required String userId});
 }
 
@@ -15,7 +15,7 @@ class UsersRemoteDataSourceImpl implements UserRemoteDataSource {
   final Dio dio = Dio();
 
   @override
-  Future<UserData> GetUser({int pageSize = 1}) async {
+  Future<UserData> getUser({int pageSize = 1}) async {
     try {
       String url = "${API.USERS}$pageSize";
 

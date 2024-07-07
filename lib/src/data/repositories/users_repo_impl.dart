@@ -15,9 +15,9 @@ class UsersRepositoryImpl extends UsersListRepository {
   final UserRemoteDataSource dataSource;
 
   @override
-  Future<Either<Failure, UserData>> GetUser({int? pageNumber}) async {
+  Future<Either<Failure, UserData>> getUser({int? pageNumber}) async {
     try {
-      final result = await dataSource.GetUser(pageSize: pageNumber!);
+      final result = await dataSource.getUser(pageSize: pageNumber!);
       return Right(result);
     } on ServerException catch (e) {
       return Left(ServerFailure(e.message));

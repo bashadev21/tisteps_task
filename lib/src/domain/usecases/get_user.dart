@@ -9,7 +9,7 @@ class GetUser {
   final UsersListRepository usersListRepository;
   GetUser(this.usersListRepository);
   Future<Either<Failure, UserData>> callUserList({int pageNumber = 1}) async {
-    return await usersListRepository.GetUser(pageNumber: pageNumber);
+    return await usersListRepository.getUser(pageNumber: pageNumber);
   }
 
   Future<Either<Failure, UserDetail>> callUserData(
